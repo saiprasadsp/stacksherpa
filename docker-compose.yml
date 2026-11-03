@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: stacksherpa-api
+    env_file:
+      - .env
+    environment:
+      CHROMA_PATH: /app/data/chroma
+      KNOWLEDGE_BASE_PATH: /app/knowledge_base
+    volumes:
+      - chroma_data:/app/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: stacksherpa-web
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  chroma_data:
