@@ -78,14 +78,8 @@ Set `VITE_API_URL=http://localhost:8000` in `frontend/.env` if needed.
 
 ## Try it
 
-Paste this into the Log Analyzer:
+Upload file to the Log Analyzer:
 
-```text
-2026-10-12T10:21:01Z ERROR POST /api/login status=500
-2026-10-12T10:21:02Z ERROR Database connection timeout after 3000ms
-2026-10-12T10:21:03Z ERROR Connection pool exhausted active=30 max=30
-2026-10-12T10:21:04Z WARN Authentication request failed user_id=demo
-```
 
 Then ask the assistant:
 
